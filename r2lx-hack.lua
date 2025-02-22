@@ -1,1 +1,0 @@
-https://raw.githubusercontent.com/AnhEmTu/Nu/refs/heads/main/luxucuthanh.lua.txt
