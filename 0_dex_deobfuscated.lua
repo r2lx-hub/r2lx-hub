@@ -60,8 +60,8 @@ Ms="Monkey"
 NameQuest="JungleQuest"
 QuestLv=1
 NameMon="Monkey"
-CFrameQ=CFrame.new(-1601.6553955078, 36.85213470459, 153.38809204102)
-CFrameMon=CFrame.new(-1448.1446533203, 50.851993560791, 63.60718536377)
+CFrameQ = CFrame.new(-1601.6553955078, 36.85213470459, 153.38809204102)
+CFrameMon = CFrame.new(-1448.1446533203, 50.851993560791, 63.60718536377)
 elseif Lv==15 or Lv<=29 or SelectMonster=="Gorilla" then
 Ms="Gorilla"
 NameQuest="JungleQuest"
@@ -641,14 +641,14 @@ QuestLv=2
 NameMon="Snow Demon"
 CFrameQ=CFrame.new(-1149.328, 13.5759039,-14445.6143,-0.156446099, 0,-0.987686574, 0, 1, 0, 0.987686574, 0,-0.156446099)
 CFrameMon=CFrame.new(-916.222656, 17.1481285,-14638.8125, 0.866007268, 0, 0.500031412, 0, 1, 0,-0.500031412, 0, 0.866007268)
-elseif Lv == 2450 or Lv <= 2474 or SelectMonster == "Isle Outlaw" or SelectArea == 'Tiki Outpost' then
+elseif Lv==2450 or Lv<=2474 or SelectMonster == "Isle Outlaw" or SelectArea == 'Tiki Outpost' then
 Ms = "Isle Outlaw"
 NameQuest = "TikiQuest1"
 QuestLv = 1
 NameMon = "Isle Outlaw"
 CFrameQ = CFrame.new(-16549.890625, 55.68635559082031, -179.91360473632812)
 CFrameMon = CFrame.new(-16162.8193359375, 11.6863374710083, -96.45481872558594)
-elseif Lv == 2475 or Lv <= 2524 or SelectMonster == "Island Boy" or SelectArea == 'Tiki Outpost' then
+elseif Lv==2475 or Lv<=2524 or SelectMonster == "Island Boy" or SelectArea == 'Tiki Outpost' then
 Ms = "Island Boy"
 NameQuest = "TikiQuest1"
 QuestLv = 2
@@ -662,14 +662,14 @@ QuestLv = 2
 NameMon = "Isle Champion"
 CFrameQ = CFrame.new(-16542.447265625, 55.68632888793945, 1044.41650390625)
 CFrameMon = CFrame.new(-16848.94140625, 21.68633460998535, 1041.4490966796875)
-elseif Lv == 2550 or Lv <= 2575 or SelectMonster == "Serpent Hunter" or SelectArea == 'Tiki Outpost 2' then
+elseif Lv==2550 or Lv<=2575 or SelectMonster == "Serpent Hunter" or SelectArea == 'Tiki Outpost 2' then
 Ms = "Serpent Hunter"
 NameQuest = "TikiQuest3"
 QuestLv = 1
 NameMon = "Serpent Hunter"
 CFrameQ = CFrame.new(-16668.0312, 105.315765, 1568.60132, -0.999815822, 2.53269654e-08, 0.0191932656, 2.47972114e-08, 1, -2.78390253e-08, -0.0191932656, -2.73579577e-08, -0.999815822)
 CFrameMon = CFrame.new(-16645.6426, 163.092682, 1352.87317, 0.999801993, -7.3039903e-09, 0.0198997185, 5.12876497e-09, 1, 1.09360379e-07, -0.0198997185, -1.09236666e-07, 0.999801993)
-elseif Lv == 2600 or SelectMonster == "Skull Slayer" or SelectArea == 'Tiki Outpost 2' then
+elseif Lv==2600 or SelectMonster == "Skull Slayer" or SelectArea == 'Tiki Outpost 2' then
 Ms = "Skull Slayer"
 NameQuest = "TikiQuest3"
 QuestLv = 2
