@@ -10,7 +10,8 @@ local Library = loadstring(game:HttpGet(repo .. 'Library.lua'))()
 
 
 Library:Notify('Script Loading')
-Notif.New("Xin chào! Đây là thông báo!", 5)
+Notif.New("Xin chào! Đây là thông báo script!", 3)
+Notif.New("Hiện Thị Lại Các Nút Ấn Sẽ Tự Động Bật Lại Khi Mất!", 4)
 ----
 local Players = game:GetService("Players")
 local TweenService = game:GetService("TweenService")
@@ -3671,11 +3672,11 @@ local listfastattack = {'Tấn công bình thường','Tấn công nhanh','Tấn
     DropdownDelayAttack:OnChanged(function(Value)
     _G.Fast_Delay = Value
 	if _G.Fast_Delay == "Tấn công nhanh" then
-		_G.UltraFastClick = 0.6
+		_G.UltraFastClick = 0
 	elseif _G.Fast_Delay == "Tấn công bình thường" then
 		_G.UltraFastClick = 0.15
 		elseif _G.Fast_Delay == "Tấn công siêu siêu nhanh" then
-		_G.UltraFastClick = 0.0000001
+		_G.UltraFastClick = 00.1
 	elseif _G.Fast_Delay == "Tấn công siêu nhanh" then
 		_G.UltraFastClick = 0.2
 	end
@@ -3962,8 +3963,8 @@ ToggleBone:OnChanged(function(Value)
     end
 end)
 Options.ToggleBone:SetValue(false)
-local BoneCFrame = CFrame.new(-9515.75, 174.85, 6079.40)
-local BoneCFrame2 = CFrame.new(-9517.65, 174.85, 6113.25)
+local BoneCFrame2 = CFrame.new(-9515.75, 174.85, 6079.40)
+local BoneCFrame = CFrame.new(-9517.65, 174.85, 6113.25)
 spawn(function()
     while wait() do
         if _G.AutoBone then
@@ -3986,10 +3987,10 @@ spawn(function()
                     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StartQuest","HauntedQuest2",1)
                     end
                 elseif game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Visible == true then
-                    if game:GetService("Workspace").Enemies:FindFirstChild("Demonic Soul") and game:GetService("Workspace").Enemies:FindFirstChild("Posessed Mummy") or game:GetService("Workspace").Enemies:FindFirstChild("Demonic Soul") or game:GetService("Workspace").Enemies:FindFirstChild("Posessed Mummy") then
+                    if game:GetService("Workspace").Enemies:FindFirstChild("Demonic Soul") and game:GetService("Workspace").Enemies:FindFirstChild("Posessed Mummy") and game:GetService("Workspace").Enemies:FindFirstChild("Reborn Skeleton") and game:GetService("Workspace").Enemies:FindFirstChild("Living Zombie") or game:GetService("Workspace").Enemies:FindFirstChild("Demonic Soul") or game:GetService("Workspace").Enemies:FindFirstChild("Posessed Mummy") or game:GetService("Workspace").Enemies:FindFirstChild("Reborn Skeleton") or game:GetService("Workspace").Enemies:FindFirstChild("Living Zombie") then
                         for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
                             if v:FindFirstChild("HumanoidRootPart") and v:FindFirstChild("Humanoid") and v.Humanoid.Health > 0 then
-                                if v.Name == "Demonic Soul" and v.Name == "Posessed Mummy" or v.Name == "Demonic Soul" or v.Name == "Posessed Mummy" then
+                                if v.Name == "Demonic Soul" and v.Name == "Posessed Mummy" and v.Name == "Reborn Skeleton" and v.Name == "Living Zombie" or v.Name == "Demonic Soul" or v.Name == "Posessed Mummy" or v.Name == "Reborn Skeleton" or v.Name == "Living Zombie"  then
                                     if string.find(game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text, "Demonic Soul") then
                                         repeat wait(0.2)
                                              
@@ -5458,22 +5459,39 @@ if SelectWeapon then EquipTool(SelectWeapon) end                                
 
     
 if Second_Sea or Third_Sea then
-    local ToggleHakiColor = Tabs.Items:AddToggle("ToggleHakiColor", {Title = "Mua Màu Haki",Default = false })
+    local ToggleHakiColor = Tabs.Items:AddToggle("ToggleHakiColor", {Title = "Mua Màu Haki", Default = false })
+    
     ToggleHakiColor:OnChanged(function(Value)
         _G.Auto_Buy_Enchancement = Value
     end)
-        Options.ToggleHakiColor:SetValue(false)
+
+    Options.ToggleHakiColor:SetValue(false)
+
     spawn(function()
-            while wait() do
-                if _G.Auto_Buy_Enchancement then
-                    local args = {
-                        [1] = "ColorsDealer",
-                        [2] = "1"
-                    }
-                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
-                end 
+        while wait(0.1) do
+            if _G.Auto_Buy_Enchancement then
+                local args1 = {
+                    [1] = "ColorsDealer",
+                    [2] = "ColorsDealer",
+                    [3] = "ColorsDealer"
+                }
+                local args2 = {
+                    [1] = "ColorsDealer",
+                    [2] = "ColorsDealer",
+                    [3] = "ColorsDealer"
+                }
+                local args3 = {
+                    [1] = "ColorsDealer",
+                    [2] = "ColorsDealer",
+                    [3] = "ColorsDealer"
+                }
+
+                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args1))
+                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args2))
+                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args3))
             end
-        end)
+        end
+    end)
 end
 
 if Second_Sea then
@@ -5490,13 +5508,13 @@ if Second_Sea then
                 local args1 = { "LegendarySwordDealer", "1" }
                 local args2 = { "LegendarySwordDealer", "2" }
                 local args3 = { "LegendarySwordDealer", "3" }
-                        -- Triple_A
+                       -- Triple_A
                         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args1))
                 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args2))
                 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args3))
 
                     else
-                        wait(2)
+                        wait(0.1)
                     end
                 end)
             end
@@ -8785,20 +8803,35 @@ end)
 -- Thêm nút vào GUI để kích hoạt chức năng này
 Tabs.Sea:AddButton({
     Title = "Hiển Thị Lại Nút Điều Khiển",
-    Description = "Hiển thị lại các nút di chuyển, chạy, lướt, nhảy, v.v.",
+    Description = "Lỗi thì bật cái dưới",
     Callback = function()
         local player = game.Players.LocalPlayer
         local playerGui = player:FindFirstChild("PlayerGui")
-        if playerGui then
-            local touchGui = playerGui:FindFirstChild("TouchGui")
-            if touchGui then
-                -- Hiển thị lại tất cả nút điều khiển nếu bị ẩn
-                for _, v in pairs(touchGui:GetDescendants()) do
-                    if v:IsA("Frame") or v:IsA("ImageButton") then
-                        v.Visible = true
-                    end
-                end
+        
+        if not playerGui then
+            Notif.New("Không tìm thấy PlayerGui!")
+            return
+        end
+
+        local touchGui = playerGui:FindFirstChild("TouchGui")
+        
+        if not touchGui then
+            Notif.New("Không tìm thấy TouchGui!")
+            return
+        end
+
+        local found = false
+        for _, v in pairs(touchGui:GetDescendants()) do
+            if v:IsA("Frame") or v:IsA("ImageButton") then
+                v.Visible = true
+                found = true
             end
+        end
+
+        if not found then
+            Notif.New("Không tìm thấy bất kỳ nút nào để hiển thị lại!")
+        else
+            Notif.New("Đã hiển thị lại tất cả nút điều khiển.")
         end
     end
 })
