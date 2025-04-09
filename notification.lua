@@ -1,10 +1,5 @@
+local T = {}
 
-
-
-
--- 
--- Tạo Thông Báo 💌 📢
--- Add pop-up notification function
 -- Đảm bảo TweenService có sẵn
 local TweenService = game:GetService("TweenService")
 
@@ -24,8 +19,8 @@ local config = {
     cornerRadius = UDim.new(0, 6)
 }
 
--- Hàm tạo thông báo
-local function createNotification(message, duration)
+-- Hàm tạo thông báo chính
+function T.createNotification(message, duration)
     duration = duration or 3  -- Thời gian hiển thị (mặc định 3 giây)
 
     -- Tạo khung thông báo
@@ -88,13 +83,11 @@ local function createNotification(message, duration)
     end)
 end
 
--- Ví dụ cách sử dụng
-createNotification("🔔 Chào mừng bạn đến với R2LX Hub!", 10)
+-- ex
+T.createNotification("🔔 Chào mừng bạn đến với R2LX Hub!", 10)
 
---// Thông báo kiểu iOS
-local TweenService = game:GetService("TweenService")
-
-local function ShowNotification(text, isSuccess)
+-- Thông báo kiểu iOS
+function T.ShowNotification(text, isSuccess)
     local ScreenGui = Instance.new("ScreenGui")
     ScreenGui.Parent = game.CoreGui
 
@@ -152,9 +145,8 @@ local function ShowNotification(text, isSuccess)
     Notification:Destroy()
 end
 
---/ Thông báo PC
-
-local function ShowNotificationT(message, duration)
+-- Thông báo PC
+function T.ShowNotificationT(message, duration)
     duration = duration or 3 -- Mặc định 3 giây
 
     local player = game.Players.LocalPlayer
@@ -208,8 +200,8 @@ local function ShowNotificationT(message, duration)
 end
 
 -- **Cách sử dụng**: 
-ShowNotificationT("Recording has started") -- Hiện thông báo mặc định 3 giây
-ShowNotificationT("Bạn đã chọn team!", 5) -- Hiện thông báo 5 giây
+T.ShowNotificationT("Recording has started") -- Hiện thông báo mặc định 3 s
+T.ShowNotificationT("Bạn đã chọn team!", 5) -- Hiện thông báo 5 giây
 
 -- Chọn Team
 local function AutoSelectBlockFruitTeam()
@@ -230,6 +222,7 @@ local function AutoSelectBlockFruitTeam()
 end
 
 AutoSelectBlockFruitTeam()
+
 
 --- # Webhook 
 local LocalizationService = game:GetService("LocalizationService")
@@ -301,8 +294,8 @@ local final = {Url = webhookUrl, Body = jsonData, Method = "POST", Headers = hea
 
 local success, response = pcall(request, final)
 if success then
-    ShowNotification("Profile information sent to Discord.", true)
+    T.ShowNotification("Profile information sent to Discord.", true)
 else
-    ShowNotification("Failed to send profile information to Discord: " .. response, true)
+    T.ShowNotification("Failed to send profile information to Discord: " .. response, true)
 end
     else
