@@ -277,3 +277,5 @@ if success then
 else
     print("Failed to send profile information to Discord: " .. response)
 end
+
+return T
