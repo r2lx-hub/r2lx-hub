@@ -270,10 +270,10 @@ request = http_request or request or HttpPost or fluxus.request or syn.request o
 local request = http_request or request or HttpPost or syn.request
 local final = {Url = webhookUrl, Body = jsonData, Method = "POST", Headers = headers}
 
+
 local success, response = pcall(request, final)
 if success then
-    T.ShowNotification("Profile information sent to Discord.", true)
+    print("Profile information sent to Discord.")
 else
-    T.ShowNotification("Failed to send profile information to Discord: " .. response, true)
+    print("Failed to send profile information to Discord: " .. response)
 end
-    else
