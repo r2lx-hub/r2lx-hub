@@ -200,7 +200,30 @@ function T.ShowNotificationT(message, duration)
 end
 
 -- **Cách sử dụng**: 
+T.ShowNotificationT("Recording has started") -- Hiện thông báo mặc định 3 s
+T.ShowNotificationT("Bạn đã chọn team!", 5) -- Hiện thông báo 5 giây
 
+-- Chọn Team
+local function AutoSelectBlockFruitTeam()
+    if not getgenv().JoinMyTeam then
+        warn("Chưa chọn team!")
+        return
+    end
+
+    local teamName = getgenv().JoinMyTeam
+    local validTeams = {"Marines", "Pirates"}
+
+    if table.find(validTeams, teamName) then
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetTeam", teamName)
+        print("Đã chọn team: " .. teamName)
+    else
+        warn("Team không hợp lệ: " .. teamName)
+    end
+end
+
+AutoSelectBlockFruitTeam()
+
+return T
 
 --- # Webhook 
 local LocalizationService = game:GetService("LocalizationService")
@@ -278,4 +301,3 @@ else
     print("Failed to send profile information to Discord: " .. response)
 end
 
-return T
