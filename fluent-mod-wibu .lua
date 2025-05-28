@@ -6181,7 +6181,7 @@ end,
         Hover = Color3.fromRGB(255, 192, 203), -- Hồng nhạt khi hover
         HoverChange = 0.1
     }
-end,
+end
 }
 do
 	local ab, ac, ad, ae, af, ag, ah, aj, c, e, f, g, h, i, j, k =
