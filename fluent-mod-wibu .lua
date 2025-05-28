@@ -6150,7 +6150,7 @@ end,
             Color3.fromRGB(64, 224, 208), -- Xanh nước đậm
             Color3.fromRGB(255, 182, 193) -- Hồng nhạt
         ),
-        AcrylicNoise = 0, -- Không đốm
+        
         TitleBarLine = Color3.fromRGB(64, 224, 208),
         Tab = Color3.fromRGB(64, 224, 208),
         Element = Color3.fromRGB(64, 224, 208),
