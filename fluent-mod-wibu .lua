@@ -6142,43 +6142,46 @@ end,
 [2440] = function()
     local aa, ab, ac, ad, ae = b(2440)
     return {
-        Name = "HongXanh",
-        Accent = Color3.fromRGB(255, 182, 193),
-        AcrylicMain = Color3.fromRGB(64, 224, 208),
-        AcrylicBorder = Color3.fromRGB(255, 182, 193),
-        AcrylicGradient = ColorSequence.new(Color3.fromRGB(64, 224, 208), Color3.fromRGB(255, 182, 193)),
-        AcrylicNoise = 0,
-        TitleBarLine = Color3.fromRGB(255, 182, 193),
+        Name = "HongXanhDam",
+        Accent = Color3.fromRGB(64, 224, 208), -- Xanh nước đậm
+        AcrylicMain = Color3.fromRGB(64, 224, 208), -- Nền chính xanh nước đậm
+        AcrylicBorder = Color3.fromRGB(255, 182, 193), -- Hồng nhạt
+        AcrylicGradient = ColorSequence.new(
+            Color3.fromRGB(64, 224, 208), -- Xanh nước đậm
+            Color3.fromRGB(255, 182, 193) -- Hồng nhạt
+        ),
+        AcrylicNoise = 0, -- Không đốm
+        TitleBarLine = Color3.fromRGB(64, 224, 208),
         Tab = Color3.fromRGB(64, 224, 208),
-        Element = Color3.fromRGB(255, 182, 193),
-        ElementBorder = Color3.fromRGB(64, 224, 208),
-        InElementBorder = Color3.fromRGB(255, 182, 193),
-        ElementTransparency = 0.75,
+        Element = Color3.fromRGB(64, 224, 208),
+        ElementBorder = Color3.fromRGB(255, 182, 193),
+        InElementBorder = Color3.fromRGB(64, 224, 208),
+        ElementTransparency = 0, -- Không trong suốt
         ToggleSlider = Color3.fromRGB(64, 224, 208),
         ToggleToggled = Color3.fromRGB(255, 182, 193),
         SliderRail = Color3.fromRGB(64, 224, 208),
-        DropdownFrame = Color3.fromRGB(40, 40, 40),
-        DropdownHolder = Color3.fromRGB(45, 45, 45),
+        DropdownFrame = Color3.fromRGB(64, 224, 208),
+        DropdownHolder = Color3.fromRGB(64, 224, 208),
         DropdownBorder = Color3.fromRGB(255, 182, 193),
-        DropdownOption = Color3.fromRGB(64, 224, 208),
-        Keybind = Color3.fromRGB(255, 182, 193),
+        DropdownOption = Color3.fromRGB(255, 182, 193),
+        Keybind = Color3.fromRGB(64, 224, 208),
         Input = Color3.fromRGB(64, 224, 208),
         InputFocused = Color3.fromRGB(255, 200, 210),
-        InputIndicator = Color3.fromRGB(255, 182, 193),
-        Dialog = Color3.fromRGB(255, 182, 193),
-        DialogHolder = Color3.fromRGB(50, 50, 50),
-        DialogHolderLine = Color3.fromRGB(64, 224, 208),
+        InputIndicator = Color3.fromRGB(64, 224, 208),
+        Dialog = Color3.fromRGB(64, 224, 208),
+        DialogHolder = Color3.fromRGB(64, 224, 208),
+        DialogHolderLine = Color3.fromRGB(255, 182, 193),
         DialogButton = Color3.fromRGB(64, 224, 208),
         DialogButtonBorder = Color3.fromRGB(255, 182, 193),
-        DialogBorder = Color3.fromRGB(64, 224, 208),
-        DialogInput = Color3.fromRGB(255, 182, 193),
+        DialogBorder = Color3.fromRGB(255, 182, 193),
+        DialogInput = Color3.fromRGB(64, 224, 208),
         DialogInputLine = Color3.fromRGB(64, 224, 208),
-        Text = Color3.fromRGB(255, 255, 255),
-        SubText = Color3.fromRGB(180, 180, 180),
-        Hover = Color3.fromRGB(255, 200, 210),
+        Text = Color3.fromRGB(30, 30, 30), -- Text màu tối dễ đọc trên nền sáng
+        SubText = Color3.fromRGB(100, 100, 100),
+        Hover = Color3.fromRGB(255, 192, 203), -- Hồng nhạt khi hover
         HoverChange = 0.1
     }
-end
+end,
 }
 do
 	local ab, ac, ad, ae, af, ag, ah, aj, c, e, f, g, h, i, j, k =
