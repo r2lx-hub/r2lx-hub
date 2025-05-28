@@ -6139,18 +6139,14 @@ end,
         HoverChange = 0.17
     }
 end,
-
 [2440] = function()
     local aa, ab, ac, ad, ae = b(2440)
     return {
         Name = "HongXanh",
-        Accent = Color3.fromRGB(64, 224, 208), -- xanh nước đậm (accent)
-        AcrylicMain = Color3.fromRGB(64, 224, 208), -- màu fallback nếu gradient không dùng
-        AcrylicBorder = Color3.fromRGB(255, 182, 193), -- viền hồng nhạt
-        AcrylicGradient = ColorSequence.new(
-            ColorSequenceKeypoint.new(0, Color3.fromRGB(64, 224, 208)), -- xanh nước đậm
-            ColorSequenceKeypoint.new(1, Color3.fromRGB(255, 182, 193)) -- hồng nhạt
-        ),
+        Accent = Color3.fromRGB(64, 224, 208),
+        AcrylicMain = Color3.fromRGB(64, 224, 208),
+        AcrylicBorder = Color3.fromRGB(255, 182, 193),
+        AcrylicGradient = ColorSequence.new(Color3.fromRGB(64, 224, 208), Color3.fromRGB(255, 182, 193)),
         AcrylicNoise = 0.185,
         TitleBarLine = Color3.fromRGB(64, 224, 208),
         Tab = Color3.fromRGB(64, 224, 208),
