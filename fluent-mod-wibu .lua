@@ -6142,7 +6142,7 @@ end,
 [2440] = function()
     local aa, ab, ac, ad, ae = b(2440)
     return {
-        Name = "HongXanhDam",
+        Name = "HongXanh",
         Accent = Color3.fromRGB(64, 224, 208), -- Xanh nước đậm
         AcrylicMain = Color3.fromRGB(64, 224, 208), -- Nền chính xanh nước đậm
         AcrylicBorder = Color3.fromRGB(255, 182, 193), -- Hồng nhạt
